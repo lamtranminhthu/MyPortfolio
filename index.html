@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121212">
+  <title>Hồ sơ LTMT-2006 | Lâm Trần Minh Thư</title>
+  <meta name="description" content="Hồ sơ phân tích hành vi của Lâm Trần Minh Thư – sinh viên năm 3 ngành CNTT, định hướng Software Developer, tìm cơ hội thực tập 2027.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- Lớp nhiễu hạt + đèn bàn -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ========== MÀN MỞ ĐẦU: BẬT ĐÈN ========== -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+    <div class="intro__lamp" aria-hidden="true"><i></i></div>
+    <div class="intro__box">
+      <p class="intro__code">FILE NO. LTMT-2006-IT · CLASSIFIED</p>
+      <h2 id="introTitle">Bạn được giao một hồ sơ đặc biệt</h2>
+      <p>Vai trò của bạn: Trưởng phòng Điều tra. Đối tượng: một "kẻ cuồng công việc" chuyên phá các vụ án lỗi hệ thống.</p>
+      <button class="btn btn--yellow" id="introBtn" type="button">[ BẬT ĐÈN &amp; MỞ HỒ SƠ ]</button>
+    </div>
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Menu chính">
+      <a href="#home" class="logo"><span class="logo__stamp">CASE</span>LTMT<b>-2006</b></a>
+      <ul class="nav__list" id="navList">
+        <li><a href="#profile" class="nav__link">Đối tượng</a></li>
+        <li><a href="#mo" class="nav__link">M.O.</a></li>
+        <li><a href="#threat" class="nav__link">Mức nguy hiểm</a></li>
+        <li><a href="#cases" class="nav__link">Vụ án</a></li>
+        <li><a href="#vault" class="nav__link">Hồ sơ mật</a></li>
+        <li><a href="#training" class="nav__link">Huấn luyện</a></li>
+        <li><a href="#witness" class="nav__link">Nhân chứng</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Triệu tập</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="icon-btn nav__toggle" id="menuBtn" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO: BÌA HỒ SƠ ========== -->
+    <section class="hero" id="home">
+      <div class="tape tape--a" aria-hidden="true"><span>CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP ·</span></div>
+      <div class="tape tape--b" aria-hidden="true"><span>CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP · CAREER SCENE — DO NOT SKIP ·</span></div>
+
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__file"><span>FILE NO.</span> LTMT-2006-IT <span class="hero__dot">●</span> <span>Mở ngày</span> <time id="openDate">--/--/----</time></p>
+          <p class="hero__kicker">Hồ sơ Phân tích Tâm lý Hành vi</p>
+          <h1>Lâm Trần<br>Minh Thư</h1>
+          <p class="hero__class">Phân loại: <b>Đối tượng đặc biệt</b> — sinh viên CNTT, chuyên phá các “vụ án lỗi hệ thống” và “nghi án trải nghiệm người dùng tệ”.</p>
+          <blockquote class="tagline">
+            <p id="tagline">“Tôi không giải quyết công việc. Tôi phân tích hành vi của bài toán và hạ gục nó trước khi nó gây ra sự cố.”</p>
+          </blockquote>
+          <div class="hero__btns">
+            <a href="#profile" class="btn btn--yellow">[ MỞ HỒ SƠ ĐỐI TƯỢNG ]</a>
+            <a href="cvltmt.pdf" class="btn btn--ghost" download="CV-LamTranMinhThu.pdf">[ TRÍCH XUẤT HỒ SƠ GỐC (CV) ]</a>
+          </div>
+          <ul class="hero__status">
+            <li><span>Điều tra viên</span><b>Bạn</b></li>
+            <li><span>Tình trạng</span><b class="blink">Đang truy tìm cơ hội thực tập 2027</b></li>
+          </ul>
+        </div>
+
+        <!-- Hiện trường: vệt phấn + biển đánh dấu tang vật -->
+        <div class="scene" aria-label="Hiện trường – bấm vào biển số để tới từng vụ án">
+          <svg class="chalk" viewBox="0 0 520 330" aria-hidden="true">
+            <defs>
+              <filter id="chalkOutline" x="-10%" y="-10%" width="120%" height="120%">
+                <feMorphology in="SourceAlpha" operator="dilate" radius="3.2" result="thick"/>
+                <feComposite in="thick" in2="SourceAlpha" operator="out" result="ring"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="noise"/>
+                <feDisplacementMap in="ring" in2="noise" scale="4" result="rough"/>
+                <feFlood flood-color="#f1efe8"/>
+                <feComposite in2="rough" operator="in"/>
+              </filter>
+            </defs>
+            <g filter="url(#chalkOutline)" stroke="#000" fill="#000" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="118" cy="96" r="30" stroke="none"/>
+              <path d="M160 124 L282 168" stroke-width="66" fill="none"/>
+              <path d="M168 104 L128 46 L66 30" stroke-width="24" fill="none"/>
+              <path d="M184 150 L156 214 L96 240" stroke-width="24" fill="none"/>
+              <path d="M280 152 L374 118 L464 138" stroke-width="28" fill="none"/>
+              <path d="M284 184 L360 226 L410 292" stroke-width="28" fill="none"/>
+              <rect x="22" y="250" width="84" height="54" rx="4" transform="rotate(-12 64 277)" stroke="none"/>
+            </g>
+            <text x="30" y="324" class="chalk__label">laptop?</text>
+          </svg>
+          <a href="#case-1" class="marker" style="--x:18%;--y:70%"><b>1</b><span>Hệ thống QLSV</span></a>
+          <a href="#case-2" class="marker" style="--x:52%;--y:30%"><b>2</b><span>Portfolio này</span></a>
+          <a href="#case-3" class="marker" style="--x:80%;--y:76%"><b>3</b><span>Cổng việc làm</span></a>
+          <svg class="fingerprint fingerprint--hero" viewBox="0 0 120 150" aria-hidden="true"><use href="#fp"/></svg>
+        </div>
+      </div>
+      <a href="#profile" class="hero__scroll" aria-label="Cuộn xuống"><span>SCROLL</span><i></i></a>
+    </section>
+
+    <!-- ========== 01. HỒ SƠ ĐỐI TƯỢNG ========== -->
+    <section class="section" id="profile">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">01</span>
+          <div>
+            <p class="eyebrow">SUBJECT PROFILE</p>
+            <h2>Hồ sơ đối tượng</h2>
+            <p class="sec-std">— Giới thiệu bản thân · Mục tiêu nghề nghiệp · Sở thích</p>
+          </div>
+          <p class="sec-head__hint"><span class="lens-ico" aria-hidden="true"></span><span class="hint-mouse">Rê kính lúp lên ảnh &amp; biên bản để soi ghi chú tâm lý</span><span class="hint-touch">Chạm vào ảnh &amp; biên bản để soi ghi chú tâm lý</span></p>
+        </header>
+
+        <div class="paper profile">
+          <span class="clip" aria-hidden="true"></span>
+          <span class="stamp stamp--red profile__stamp">CONFIDENTIAL</span>
+
+          <div class="mugshots">
+            <figure class="mug inspect" tabindex="0">
+              <div class="mug__frame">
+                <div class="mug__lines" aria-hidden="true"><i class="min" style="--t:1.2%"></i><i class="maj" style="--t:13.2%"></i><i class="min" style="--t:25.2%"></i><i class="maj" style="--t:37.2%"></i><i class="min" style="--t:49.2%"></i><i class="maj" style="--t:61.2%"></i><i class="min" style="--t:73.2%"></i><i class="maj" style="--t:85.2%"></i><i class="min" style="--t:97.2%"></i></div>
+                <div class="mug__ruler" aria-hidden="true"><span style="--t:13.2%">160</span><span style="--t:37.2%">150</span><span style="--t:61.2%">140</span><span style="--t:85.2%">130</span><b class="mug__h" style="--t:8.4%">162</b></div>
+                <img src="images/avatar.jpg" alt="Ảnh chân dung chính diện của Lâm Trần Minh Thư" width="294" height="412">
+                <div class="notes" aria-hidden="true">
+                  <span class="note note--abs" style="--x:4%;--y:20%">Tóc mái + kính cận</span>
+                  <span class="note note--abs" style="--x:40%;--y:52%">Biểu cảm bình thản — kiểu người đọc log lỗi không hoảng</span>
+                  <span class="note note--abs" style="--x:30%;--y:2%">Chiều cao: đúng 1m62</span>
+                  <span class="note note--abs" style="--x:8%;--y:80%">Sơ mi trắng: đã sẵn sàng cho buổi “thẩm vấn”</span>
+                </div>
+              </div>
+              <figcaption class="placard"><b>LTMT-2006</b><span>CHÍNH DIỆN</span></figcaption>
+            </figure>
+            <figure class="mug mug--side inspect" tabindex="0">
+              <div class="mug__frame">
+                <div class="mug__lines" aria-hidden="true"><i class="min" style="--t:1.2%"></i><i class="maj" style="--t:13.2%"></i><i class="min" style="--t:25.2%"></i><i class="maj" style="--t:37.2%"></i><i class="min" style="--t:49.2%"></i><i class="maj" style="--t:61.2%"></i><i class="min" style="--t:73.2%"></i><i class="maj" style="--t:85.2%"></i><i class="min" style="--t:97.2%"></i></div>
+                <div class="mug__ruler" aria-hidden="true"><span style="--t:13.2%">160</span><span style="--t:37.2%">150</span><span style="--t:61.2%">140</span><span style="--t:85.2%">130</span><b class="mug__h" style="--t:8.4%">162</b></div>
+                <img src="images/avatar.jpg" alt="Ảnh cận cảnh của Lâm Trần Minh Thư" width="294" height="412" class="is-closeup">
+                <div class="notes" aria-hidden="true">
+                  <span class="note note--abs" style="--x:6%;--y:24%">Ảnh lưu hồ sơ: tóc đen</span>
+                  <span class="note note--abs" style="--x:30%;--y:74%">Dấu hiệu nhận dạng: luôn mang theo laptop</span>
+                </div>
+              </div>
+              <figcaption class="placard"><b>LTMT-2006</b><span class="mug__side-label">CẬN CẢNH</span></figcaption>
+            </figure>
+            <div class="idcard">
+              <svg viewBox="0 0 120 150" aria-hidden="true"><use href="#fp"/></svg>
+              <div>
+                <p class="idcard__k">DẤU VÂN TAY · NGÓN TRỎ PHẢI</p>
+                <p class="idcard__v">Đã lưu hồ sơ. Khớp với dấu vết để lại trên 3 hiện trường: Case #01 – #03.</p>
+              </div>
+            </div>
+            <div class="traits traits--left">
+              <p class="traits__title">Đặc điểm nhận dạng ngoài giờ</p>
+              <ul>
+                <li><span aria-hidden="true">📖</span><span>Đam mê sách tâm lý học tội phạm</span></li>
+                <li><span aria-hidden="true">🎧</span><span>Nghe nhạc</span></li>
+                <li><span aria-hidden="true">📷</span><span>Chụp ảnh</span></li>
+              </ul>
+            </div>
+
+            <!-- Báo cáo theo dõi: đối tượng đã thay đổi ngoại hình -->
+            <article class="update">
+              <header class="update__head">
+                <p class="update__k">BÁO CÁO THEO DÕI · 2026</p>
+                <h3>Đối tượng đã thay đổi ngoại hình</h3>
+              </header>
+              <div class="update__body">
+                <figure class="update__photo inspect" tabindex="0">
+                  <img src="images/anh2026.jpg" alt="Ảnh Lâm Trần Minh Thư năm 2026 với mái tóc nhuộm vàng" width="316" height="634" loading="lazy">
+                  <span class="update__rec" aria-hidden="true">● REC 2026</span>
+                  <span class="notes" aria-hidden="true">
+                    <span class="note note--abs" style="--x:30%;--y:6%">Tóc vàng ???</span>
+                    <span class="note note--abs" style="--x:4%;--y:34%">Ký hiệu ✌: 2 ngón = 2 phi vụ đã thực hiện trót lọt</span>
+                    <span class="note note--abs" style="--x:30%;--y:60%">Vẫn đeo kính → vẫn là đối tượng</span>
+                  </span>
+                  <figcaption>Ảnh theo dõi · cập nhật 2026</figcaption>
+                </figure>
+                <div class="update__info">
+                  <span class="stamp stamp--red update__stamp">ĐÃ THAY ĐỔI NGOẠI HÌNH</span>
+                  <dl class="update__diff">
+                    <div><dt>Màu tóc</dt><dd><s>Đen</s> → <b>Vàng</b></dd></div>
+                    <div><dt>Kính cận</dt><dd>Giữ nguyên</dd></div>
+                    <div><dt>Ảnh lưu hồ sơ</dt><dd>Chưa cập nhật</dd></div>
+                  </dl>
+                  <p class="update__memo">Ghi chú điều tra viên: ngoại hình thay đổi, năng lực giữ nguyên. Tiếp tục theo dõi.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="interrogation">
+            <p class="sheet-title">BIÊN BẢN HỎI CUNG</p>
+            <dl class="fields inspect" tabindex="0">
+              <div><dt>Họ và tên</dt><dd>Lâm Trần Minh Thư</dd><span class="note">Bí danh trên mạng: LaamThuw</span></div>
+              <div><dt>Ngày sinh · Giới tính · Chiều cao</dt><dd><span>20/11/2006</span> · <span>Nữ</span> · <span>1m62</span></dd><span class="note">Ghi nhớ 20/11 — sẽ cần ở “Hồ sơ mật”</span></div>
+              <div><dt>Chuyên môn</dt><dd>Software Developer (định hướng)</dd><span class="note">Mục tiêu rõ ràng, không lan man</span></div>
+              <div><dt>Mức độ nguy hiểm (Trình độ)</dt><dd>Sinh viên năm 3 · CNTT · GPA 3.1/4.0</dd><span class="note">Đang ở giai đoạn học nhanh nhất</span></div>
+              <div><dt>Địa bàn hoạt động</dt><dd>TP. Thủ Đức, TP. Hồ Chí Minh</dd><span class="note">Nơi sinh cũng tại TP.HCM — “dân bản địa”</span></div>
+              <div><dt>Đặc điểm nhận dạng</dt><dd>Tóc nhuộm vàng <small class="dd-note">(cập nhật 2026, khác ảnh lưu hồ sơ)</small> · Đeo kính cận</dd><span class="note">Đối tượng đã thay đổi ngoại hình — xem ảnh theo dõi 2026</span></div>
+              <div><dt>Tình trạng</dt><dd class="dd--red">Chưa bị “bắt” — tìm thực tập Software Developer năm 2027</dd><span class="note">Khuyến nghị: triệu tập trước khi nơi khác ra tay</span></div>
+            </dl>
+
+            <div class="statement">
+              <h3>Lời khai của đối tượng</h3>
+              <p>“Tôi là Minh Thư, sinh viên năm 3 ngành Công nghệ thông tin tại Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh, có kiến thức nền tảng về lập trình và phát triển website. Tôi có khả năng tư duy logic, nghiên cứu và tự học công nghệ mới; có tinh thần trách nhiệm, chủ động và làm việc nhóm tốt. Tôi mong muốn được học hỏi, tích lũy kinh nghiệm và phát triển kỹ năng chuyên môn trong môi trường doanh nghiệp.”</p>
+            </div>
+
+            <h3 class="motives__title">Mục tiêu nghề nghiệp <span>(động cơ của đối tượng)</span></h3>
+            <div class="motives">
+              <div class="motive">
+                <span class="motive__tag">MỤC TIÊU NGẮN HẠN</span>
+                <p>Tìm cơ hội thực tập vị trí Software Developer năm 2027 để vận dụng kiến thức vào thực tế, trau dồi kỹ năng lập trình, làm việc nhóm và tích lũy kinh nghiệm trong doanh nghiệp.</p>
+              </div>
+              <div class="motive">
+                <span class="motive__tag">MỤC TIÊU DÀI HẠN</span>
+                <p>Trở thành Software Developer có nền tảng vững chắc, xây dựng phần mềm hoạt động ổn định, dễ bảo trì, thân thiện với người dùng và đáp ứng tốt nhu cầu thực tế.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02. CHẨN ĐOÁN & M.O. ========== -->
+    <section class="section section--desk" id="mo">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">02</span>
+          <div>
+            <p class="eyebrow">PSYCH DIAGNOSIS &amp; MODUS OPERANDI</p>
+            <h2>Chẩn đoán tâm lý &amp; Phương thức gây án</h2>
+            <p class="sec-std">— Kỹ năng chuyên môn · Kỹ năng mềm · Kinh nghiệm &amp; hoạt động</p>
+          </div>
+        </header>
+
+        <div class="mo">
+          <div class="mo__col">
+            <h3 class="col-title"><span>M.O.</span> <span>Phương thức hành động — “Hung khí” thường dùng</span></h3>
+            <div class="bags">
+              <article class="bag" data-level="65"><span class="bag__no">A-01</span><h4>HTML5</h4><p>Cấu trúc ngữ nghĩa cho mọi hiện trường</p><div class="bag__bar"><span></span></div><span class="bag__lv">65%</span></article>
+              <article class="bag" data-level="60"><span class="bag__no">A-02</span><h4>CSS3</h4><p>Flexbox · Grid · Responsive</p><div class="bag__bar"><span></span></div><span class="bag__lv">60%</span></article>
+              <article class="bag" data-level="55"><span class="bag__no">A-03</span><h4>JavaScript</h4><p>DOM · Events</p><div class="bag__bar"><span></span></div><span class="bag__lv">55%</span></article>
+              <article class="bag" data-level="55"><span class="bag__no">A-04</span><h4>Python</h4><p>Vũ khí chính ở Case #01</p><div class="bag__bar"><span></span></div><span class="bag__lv">55%</span></article>
+              <article class="bag" data-level="55"><span class="bag__no">A-05</span><h4>Java</h4><p>Lập trình hướng đối tượng</p><div class="bag__bar"><span></span></div><span class="bag__lv">55%</span></article>
+              <article class="bag" data-level="60"><span class="bag__no">A-06</span><h4>Git / GitHub</h4><p>Lưu vết mọi thay đổi — không xóa dấu</p><div class="bag__bar"><span></span></div><span class="bag__lv">60%</span></article>
+            </div>
+            <p class="tools"><span>Dụng cụ hỗ trợ:</span> <b>Visual Studio Code</b> · <b>SQLite</b></p>
+          </div>
+
+          <div class="mo__col">
+            <h3 class="col-title"><span>PSY</span> <span>Đặc điểm tâm lý — kết luận giám định</span></h3>
+            <ol class="diagnosis">
+              <li>
+                <h4>Làm việc nhóm &amp; phối hợp</h4>
+                <p>Bằng chứng: phối hợp trong nhóm 5 người (Case #01) và 6 người (Case #03).</p>
+                <span class="dx dx--high">RÕ RỆT</span>
+              </li>
+              <li>
+                <h4>Quản lý thời gian &amp; sắp xếp công việc</h4>
+                <p>Bằng chứng: lên kế hoạch, nhắc lịch, theo dõi tiến độ để nhóm hoàn thành đúng hạn.</p>
+                <span class="dx dx--high">RÕ RỆT</span>
+              </li>
+              <li>
+                <h4>Tự học, chủ động tìm hiểu công nghệ mới</h4>
+                <p>Bằng chứng: tự xây dựng toàn bộ Case #02 — trang bạn đang xem.</p>
+                <span class="dx dx--crit">MÃN TÍNH</span>
+              </li>
+              <li>
+                <h4>Thuyết trình &amp; trình bày vấn đề</h4>
+                <p>Bằng chứng: tổng hợp nội dung, chuẩn bị slide và trình bày kết quả cho nhóm.</p>
+                <span class="dx dx--high">RÕ RỆT</span>
+              </li>
+              <li>
+                <h4>Tư duy logic &amp; tinh thần trách nhiệm</h4>
+                <p>Bằng chứng: phân tích yêu cầu, đặc tả và sơ đồ hóa quy trình nghiệp vụ ở Case #01.</p>
+                <span class="dx dx--high">RÕ RỆT</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Tiền sử hành vi -->
+        <div class="history">
+          <h3 class="col-title"><span>REC</span> <span>Tiền sử hành vi — hoạt động nhóm trong học tập</span></h3>
+          <ol class="history__list">
+            <li><time>2021 - nay</time><h4>Lần đầu nhận vai nhóm trưởng</h4><p>Chủ động nhận nhiệm vụ nhóm trưởng, cùng các bạn thống nhất mục tiêu và phân chia công việc phù hợp.</p></li>
+            <li><time></time><h4>Lập kế hoạch &amp; theo dõi tiến độ</h4><p>Sắp xếp đầu việc theo thế mạnh từng thành viên, nhắc lịch, cập nhật tiến độ và hỗ trợ nhóm hoàn thành đúng thời hạn.</p></li>
+            <li><time></time><h4>Tổng hợp &amp; trình bày ý tưởng</h4><p>Tổng hợp nội dung, chuẩn bị slide, trình bày kết quả và lắng nghe góp ý để cải thiện sản phẩm chung.</p></li>
+          </ol>
+          <p class="footnote">* Đây là kinh nghiệm hoạt động và làm việc nhóm trong học tập, không phải kinh nghiệm làm việc tại doanh nghiệp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 03. THANH TRƯỢT MỨC ĐỘ NGUY HIỂM ========== -->
+    <section class="section" id="threat">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">03</span>
+          <div>
+            <p class="eyebrow">THREAT ASSESSMENT</p>
+            <h2>Đánh giá mức độ nguy hiểm</h2>
+            <p class="sec-std">— Thành tích nổi bật</p>
+          </div>
+          <p class="sec-head__hint">Kéo thanh trượt để giải mật dần các thành tích của đối tượng</p>
+        </header>
+
+        <div class="threat" id="threatBox" data-level="0">
+          <div class="threat__control">
+            <div class="threat__readout">
+              <span>Mức hiện tại</span>
+              <strong id="threatLabel">LOW</strong>
+            </div>
+            <input type="range" id="threatRange" min="0" max="3" step="1" value="0" aria-describedby="threatLabel" aria-label="Mức độ nguy hiểm">
+            <div class="threat__scale" aria-hidden="true"><span>LOW</span><span>GUARDED</span><span>HIGH</span><span>CRITICAL</span></div>
+            <div class="threat__count">
+              <strong id="threatCount">2</strong><span>/ 9</span>
+              <p>bằng chứng đã được giải mật</p>
+            </div>
+          </div>
+
+          <ul class="findings">
+            <li data-min="0"><span class="findings__lv">L0</span><p><span>Sinh viên năm 3 ngành CNTT, Trường ĐH Giao thông Vận tải TP.HCM.</span></p></li>
+            <li data-min="0"><span class="findings__lv">L0</span><p><span>Nắm nền tảng HTML5, CSS3 (Flexbox, Grid, Responsive) và JavaScript (DOM, Events).</span></p></li>
+            <li data-min="1"><span class="findings__lv">L1</span><p><span>Sử dụng 3 ngôn ngữ lập trình: JavaScript, Python và Java.</span></p></li>
+            <li data-min="1"><span class="findings__lv">L1</span><p><span>Quản lý mã nguồn bằng Git &amp; GitHub — mọi “hành vi” đều có lưu vết.</span></p></li>
+            <li data-min="2"><span class="findings__lv">L2</span><p><span>GPA 3.1/4.0 — duy trì trong khi vẫn tham gia các dự án nhóm.</span></p></li>
+            <li data-min="2"><span class="findings__lv">L2</span><p><span>3 vụ án đã nhận: 2 đã khép hồ sơ, 1 đang điều tra; phối hợp trong các nhóm 5 và 6 người.</span></p></li>
+            <li data-min="3" class="findings--crit"><span class="findings__lv">L3</span><p><span>Tham gia lập trọn bộ tài liệu phân tích – thiết kế hệ thống: đặc tả yêu cầu, Use Case, DFD và Class Diagram.</span></p></li>
+            <li data-min="3" class="findings--crit"><span class="findings__lv">L3</span><p><span>Một mình xây portfolio responsive, có kính lúp, khóa mã và thanh trượt — chính là trang bạn đang xem.</span></p></li>
+            <li data-min="3" class="findings--crit"><span class="findings__lv">L3</span><p><span>Giữ vai trò nhóm trưởng trong các hoạt động học tập từ năm lớp 10.</span></p></li>
+          </ul>
+          <p class="threat__alert" role="status" aria-live="polite">⚠ CẢNH BÁO: ĐỐI TƯỢNG ĐẶC BIỆT NGUY HIỂM — KHUYẾN NGHỊ TRIỆU TẬP NGAY</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04. HỒ SƠ VỤ ÁN ========== -->
+    <section class="section section--desk" id="cases">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">04</span>
+          <div>
+            <p class="eyebrow">CASE FILES</p>
+            <h2>Các vụ án đã giải mã</h2>
+            <p class="sec-std">— Dự án cá nhân</p>
+          </div>
+          <div class="filters" role="group" aria-label="Lọc vụ án">
+            <button class="filter is-active" type="button" data-filter="all">Tất cả</button>
+            <button class="filter" type="button" data-filter="web">Web</button>
+            <button class="filter" type="button" data-filter="python">Python</button>
+          </div>
+        </header>
+
+        <div class="cases">
+          <!-- CASE 01 -->
+          <article class="case" id="case-1" data-category="python">
+            <div class="case__tab">CASE #01</div>
+            <div class="case__body">
+              <header class="case__head">
+                <div>
+                  <h3>Hệ thống quản lý sinh viên</h3>
+                  <p class="case__meta">Python · SQLite · Nhóm 5 thành viên</p>
+                </div>
+                <span class="stamp stamp--green">ĐÃ KHÉP HỒ SƠ</span>
+              </header>
+              <button class="evidence inspect" type="button" data-title-key="p1" data-images="images/DFD.jpg,images/UCD.jpg,images/CD.jpg" aria-label="Xem tang vật: sơ đồ DFD, Use Case, Class Diagram">
+                <img src="images/DFD.jpg" alt="Sơ đồ DFD mức ngữ cảnh của Hệ thống quản lý sinh viên" loading="lazy">
+                <span class="evidence__tag">EVIDENCE 01-A · 3 <span>ảnh</span></span>
+                <span class="notes" aria-hidden="true">
+                  <span class="note note--abs" style="--x:30%;--y:40%">DFD ngữ cảnh: 4 tác nhân, 1 hệ thống — bản đồ hiện trường</span>
+                </span>
+              </button>
+              <dl class="case__facts">
+                <div><dt>Hiện trường</dt><dd>Hồ sơ sinh viên, đăng ký học phần, điểm số và thời khóa biểu cần được quản lý tập trung, rõ quy trình cho sinh viên, giảng viên và quản trị viên.</dd></div>
+                <div><dt>Động cơ &amp; Động thái</dt><dd>Phân tích yêu cầu chức năng và phi chức năng; xây dựng đặc tả, sơ đồ Use Case, DFD, Class Diagram; phân tích quy trình; tham gia lập trình một số chức năng bằng Python và SQLite.</dd></div>
+                <div class="case__verdict"><dt>Kết án</dt><dd>Hệ thống hoàn thành. Bộ tài liệu phân tích – thiết kế đầy đủ được đưa vào hồ sơ làm tang vật.</dd></div>
+              </dl>
+              <div class="case__links">
+                <button class="link-btn" type="button" data-modal="p1">Đọc toàn bộ hồ sơ →</button>
+                <a href="https://github.com/tienhxit-jpg/StudentManagementSystem" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 02 -->
+          <article class="case" id="case-2" data-category="web">
+            <div class="case__tab">CASE #02</div>
+            <div class="case__body">
+              <header class="case__head">
+                <div>
+                  <h3>Website Portfolio cá nhân</h3>
+                  <p class="case__meta">HTML · CSS · JavaScript · Cá nhân</p>
+                </div>
+                <span class="stamp stamp--green">ĐÃ KHÉP HỒ SƠ</span>
+              </header>
+              <button class="evidence inspect" type="button" data-title-key="p2" data-images="images/cv1.jpg,images/cv2.jpg,images/cv3.jpg" aria-label="Xem tang vật: ảnh chụp giao diện portfolio">
+                <img src="images/cv1.jpg" alt="Ảnh chụp giao diện Website Portfolio cá nhân" loading="lazy">
+                <span class="evidence__tag">EVIDENCE 02-A · 3 <span>ảnh</span></span>
+                <span class="notes" aria-hidden="true">
+                  <span class="note note--abs" style="--x:26%;--y:44%">Hiện trường bạn đang đứng: chính là trang này</span>
+                </span>
+              </button>
+              <dl class="case__facts">
+                <div><dt>Hiện trường</dt><dd>Một sinh viên chưa có kinh nghiệm doanh nghiệp cần chứng minh năng lực — một tờ CV giấy là chưa đủ sức thuyết phục.</dd></div>
+                <div><dt>Động cơ &amp; Động thái</dt><dd>Xây giao diện responsive, menu mobile, lọc dự án, xem chi tiết và kiểm tra biểu mẫu bằng JavaScript; bản này bổ sung kính lúp soi ghi chú, khóa mã và thanh trượt mức độ nguy hiểm.</dd></div>
+                <div class="case__verdict"><dt>Kết án</dt><dd>Hoàn thành, một mình thực hiện. Bằng chứng sống: bạn đang đứng giữa hiện trường.</dd></div>
+              </dl>
+              <div class="case__links">
+                <button class="link-btn" type="button" data-modal="p2">Đọc toàn bộ hồ sơ →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 03 -->
+          <article class="case case--open" id="case-3" data-category="web">
+            <div class="case__tab">CASE #03</div>
+            <div class="case__body">
+              <header class="case__head">
+                <div>
+                  <h3>Website Cổng thông tin việc làm</h3>
+                  <p class="case__meta">HTML · CSS · JavaScript · Nhóm 6 thành viên</p>
+                </div>
+                <span class="stamp stamp--yellow">ĐANG ĐIỀU TRA</span>
+              </header>
+              <button class="evidence inspect" type="button" data-title-key="p3" data-images="images/trangchu.png,images/vieclam.png,images/cty.png" aria-label="Xem tang vật: wireframe cổng việc làm">
+                <img src="images/trangchu.png" alt="Wireframe trang chủ Website Cổng thông tin việc làm" loading="lazy">
+                <span class="evidence__tag">EVIDENCE 03-A · 3 <span>ảnh</span></span>
+                <span class="notes" aria-hidden="true">
+                  <span class="note note--abs" style="--x:22%;--y:48%">Wireframe: phác họa hiện trường trước khi ra tay</span>
+                </span>
+              </button>
+              <dl class="case__facts">
+                <div><dt>Hiện trường</dt><dd>Người tìm việc và nhà tuyển dụng cần một điểm hẹn: tìm việc, đăng tin tuyển dụng, xem thông tin công ty và quản lý người dùng.</dd></div>
+                <div><dt>Động cơ &amp; Động thái</dt><dd>Phân tích yêu cầu chức năng và phi chức năng; tham gia thiết kế giao diện, bố cục; phối hợp với nhóm xây dựng giao diện bằng HTML, CSS, JavaScript.</dd></div>
+                <div class="case__verdict"><dt>Kết án</dt><dd>Chưa tuyên án — vụ án đang trong giai đoạn phát triển. Wireframe các trang chính đã được thu thập.</dd></div>
+              </dl>
+              <div class="case__links">
+                <button class="link-btn" type="button" data-modal="p3">Đọc toàn bộ hồ sơ →</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 05. HỒ SƠ MẬT (EVIDENCE LOCK) ========== -->
+    <section class="section" id="vault">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">05</span>
+          <div>
+            <p class="eyebrow">EVIDENCE LOCK</p>
+            <h2>Hồ sơ mật: Mức lương kỳ vọng</h2>
+            <p class="sec-std">— Mức lương kỳ vọng</p>
+          </div>
+        </header>
+
+        <div class="vault" id="vaultBox">
+          <div class="lock" id="lock">
+            <p class="lock__title">NHẬP MÃ GIẢI MẬT</p>
+            <div class="lock__display" id="lockDisplay" aria-live="polite"><i></i><i></i><i></i><i></i></div>
+            <div class="keypad" id="keypad">
+              <button type="button" data-k="1">1</button><button type="button" data-k="2">2</button><button type="button" data-k="3">3</button>
+              <button type="button" data-k="4">4</button><button type="button" data-k="5">5</button><button type="button" data-k="6">6</button>
+              <button type="button" data-k="7">7</button><button type="button" data-k="8">8</button><button type="button" data-k="9">9</button>
+              <button type="button" data-k="del" aria-label="Xóa">⌫</button><button type="button" data-k="0">0</button><button type="button" data-k="ok" class="keypad__ok">OK</button>
+            </div>
+            <p class="lock__hint">Gợi ý: ngày + tháng sinh của đối tượng (ddmm).</p>
+          </div>
+
+          <div class="sealed" id="sealed">
+            <div class="seal-tape" aria-hidden="true"><span>EVIDENCE · SEALED · DO NOT OPEN · EVIDENCE · SEALED · DO NOT OPEN ·</span></div>
+            <div class="sealed__cover" aria-hidden="true">
+              <svg class="padlock" viewBox="0 0 64 64"><rect x="12" y="28" width="40" height="30" rx="4"/><path d="M20 28v-8a12 12 0 0 1 24 0v8" fill="none" stroke-width="6"/><circle cx="32" cy="42" r="4" class="padlock__hole"/></svg>
+              <p>NỘI DUNG ĐÃ NIÊM PHONG</p>
+            </div>
+            <div class="sealed__content" id="sealedContent" hidden>
+              <p class="eyebrow eyebrow--red">CLASSIFIED · EXPECTED SALARY</p>
+              <h3>Mức lương kỳ vọng của đối tượng</h3>
+              <div class="salary">
+                <span class="salary__k">MỨC KỲ VỌNG</span>
+                <strong class="salary__v">3 - 5 triệu<small>/tháng</small></strong>
+                <p>Mức tham khảo cho vị trí thực tập; sẵn sàng trao đổi theo năng lực và chính sách thực tập của công ty. Với đối tượng, cơ hội được học hỏi và làm sản phẩm thật quan trọng hơn con số.</p>
+                <span class="stamp stamp--red salary__stamp">CÓ THỂ THƯƠNG LƯỢNG</span>
+              </div>
+              <dl class="demand-list">
+                <div><dt>Vị trí</dt><dd>Thực tập sinh Software Developer</dd></div>
+                <div><dt>Thời điểm</dt><dd>Năm 2027</dd></div>
+                <div><dt>Môi trường mong muốn</dt><dd>Được học hỏi, làm việc nhóm và vận dụng kiến thức vào sản phẩm thực tế</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 06. LỊCH SỬ HUẤN LUYỆN ========== -->
+    <section class="section section--desk" id="training">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">06</span>
+          <div>
+            <p class="eyebrow">TRAINING RECORD</p>
+            <h2>Lịch sử huấn luyện &amp; đào tạo đặc nhiệm</h2>
+            <p class="sec-std">— Học vấn · Chứng chỉ &amp; giải thưởng</p>
+          </div>
+        </header>
+
+        <ol class="training">
+          <li class="cert">
+            <div class="cert__copy">
+              <span class="cert__date">2021 – 2024</span>
+              <span class="cert__kicker">Huấn luyện cơ bản · Trung học phổ thông</span>
+              <h3>Trường THPT Giồng Ông Tố</h3>
+              <p>Tốt nghiệp THPT năm 2024.</p>
+              <span class="stamp stamp--red cert__stamp">ĐẠT</span>
+            </div>
+            <figure class="cert__media polaroid">
+              <img src="images/THPT.jpg" alt="Trường THPT Giồng Ông Tố" data-missing="1">
+              <div class="photo-missing" aria-hidden="true"><b>NO PHOTO</b><span>Ảnh lưu trữ đang được bổ sung</span></div>
+              <figcaption>Tốt nghiệp 2024 — hoàn thành huấn luyện cơ bản</figcaption>
+            </figure>
+          </li>
+          <li class="cert">
+            <div class="cert__copy">
+              <span class="cert__date">2024 – nay</span>
+              <span class="cert__kicker">Huấn luyện đặc nhiệm · Đại học</span>
+              <h3>Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh</h3>
+              <p>Ngành Công nghệ thông tin · Sinh viên năm 3 · GPA 3.1/4.0</p>
+              <span class="stamp stamp--yellow cert__stamp">ĐANG HUẤN LUYỆN</span>
+            </div>
+            <div class="cert__media-grid">
+              <figure class="polaroid inspect" tabindex="0">
+                <img src="images/DH.jpg" alt="Đối tượng cùng các bạn tại trường đại học" loading="lazy">
+                <span class="notes" aria-hidden="true"><span class="note note--abs" style="--x:6%;--y:16%">Đồng phục huấn luyện: kỷ luật được rèn bài bản</span><span class="note note--abs" style="--x:30%;--y:70%">Hoạt động theo nhóm — có “đồng bọn”</span></span>
+                <figcaption>Huấn luyện thực địa cùng đồng bọn</figcaption>
+              </figure>
+              <figure class="polaroid polaroid--tilt inspect" tabindex="0">
+                <img src="images/CNTT.jpg" alt="Laptop và sổ ghi chép khi học Công nghệ thông tin" loading="lazy">
+                <span class="notes" aria-hidden="true"><span class="note note--abs" style="--x:8%;--y:20%">Laptop mở sẵn: luôn trong tư thế tác nghiệp</span><span class="note note--abs" style="--x:34%;--y:72%">Sổ ghi chép — thói quen ghi lại mọi manh mối</span></span>
+                <figcaption>Hiện trường tác nghiệp hằng ngày</figcaption>
+              </figure>
+            </div>
+          </li>
+          <li class="cert cert--empty">
+            <div class="cert__copy">
+              <span class="cert__date">— — —</span>
+              <span class="cert__kicker">Chứng chỉ &amp; giải thưởng</span>
+              <h3>Ô lưu trữ còn trống</h3>
+              <p>Chưa có chứng chỉ hay giải thưởng nổi bật. Ngăn hồ sơ này được để dành cho những cột mốc tiếp theo.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== 07. LỜI KHAI NHÂN CHỨNG ========== -->
+    <section class="section" id="witness">
+      <div class="container">
+        <header class="sec-head">
+          <span class="sec-head__no">07</span>
+          <div>
+            <p class="eyebrow">WITNESS STATEMENTS</p>
+            <h2>Lời khai từ nhân chứng</h2>
+            <p class="sec-std">— Nhận xét / đánh giá</p>
+          </div>
+        </header>
+        <div class="witnesses">
+          <article class="witness">
+            <p class="witness__role">NHÂN CHỨNG #1 · Điều tra viên trưởng (Giảng viên / Quản lý)</p>
+            <p class="witness__quote"><span class="redact">███████ ████ ██████████ ███ ████</span> <span class="redact">█████ ██████ ███████</span></p>
+            <span class="stamp stamp--red witness__stamp">CHỜ LẤY LỜI KHAI</span>
+          </article>
+          <article class="witness">
+            <p class="witness__role">NHÂN CHỨNG #2 · Cộng sự hiện trường (Đồng đội dự án)</p>
+            <p class="witness__quote"><span class="redact">██████ ███ █████████ ██</span> <span class="redact">████████ ████ ██████████ ███</span></p>
+            <span class="stamp stamp--red witness__stamp">CHỜ LẤY LỜI KHAI</span>
+          </article>
+          <article class="witness witness--you">
+            <p class="witness__role">NHÂN CHỨNG #3 · Có thể là bạn</p>
+            <p class="witness__quote">Sau buổi phỏng vấn, lời khai của bạn có thể là dòng đầu tiên được ghi vào đây.</p>
+            <a href="#contact" class="link-btn">Ghi lời khai →</a>
+          </article>
+        </div>
+        <p class="footnote">* Đối tượng chưa có kinh nghiệm làm việc tại doanh nghiệp; các lời khai sẽ được cập nhật khi có nhận xét thật từ giảng viên và đồng đội.</p>
+      </div>
+    </section>
+
+    <!-- ========== 08. TRIỆU TẬP ========== -->
+    <section class="section section--warrant" id="contact">
+      <div class="container warrant">
+        <div class="warrant__head">
+          <p class="eyebrow eyebrow--yellow">ARREST WARRANT · INTERVIEW</p>
+          <h2>Bạn đã có đủ bằng chứng?</h2>
+            <p class="sec-std">— Liên hệ</p>
+          <p class="warrant__lead">Điền phiếu triệu tập hoặc liên hệ trực tiếp qua các kênh bên dưới để phát lệnh triệu tập (phỏng vấn) đối tượng ngay hôm nay.</p>
+          <ul class="contact__list">
+            <li><span>EMAIL</span><a href="mailto:thultm1931@ut.edu.vn">thultm1931@ut.edu.vn</a><button type="button" class="copy-btn" id="copyEmail">Sao chép</button></li>
+            <li><span>ĐIỆN THOẠI</span><a href="tel:0778990397">0778 990 397</a></li>
+            <li><span>GITHUB</span><a href="https://github.com/lamtranminhthu" target="_blank" rel="noopener">github.com/lamtranminhthu</a></li>
+            <li><span>ĐỊA BÀN</span><span>TP. Thủ Đức, TP. Hồ Chí Minh</span></li>
+          </ul>
+        </div>
+
+        <form id="contactForm" class="form paper" novalidate>
+          <p class="sheet-title">PHIẾU TRIỆU TẬP</p>
+          <div class="field">
+            <label for="name">Điều tra viên (họ và tên)</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <small class="error" id="nameErr"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email liên lạc</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <small class="error" id="emailErr"></small>
+          </div>
+          <div class="field">
+            <label for="message"><span>Nội dung lệnh triệu tập</span> <span class="count" id="count">0/300</span></label>
+            <textarea id="message" name="message" rows="5" maxlength="300"></textarea>
+            <small class="error" id="messageErr"></small>
+          </div>
+          <button type="submit" class="btn btn--red">[ ĐÓNG DẤU &amp; GỬI ]</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+          <span class="stamp form__stamp" aria-hidden="true">ĐÃ PHÁT LỆNH</span>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Lâm Trần Minh Thư · Hồ sơ được lập bằng HTML, CSS và JavaScript . Không có bug nào sống sót trong quá trình phá án.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Lên đầu trang">↑</button>
+
+  <!-- Kính lúp đi theo con trỏ -->
+  <div class="lens" id="lens" aria-hidden="true"></div>
+
+  <!-- Lightbox tang vật -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Đóng">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Ảnh trước">‹</button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Ảnh sau">›</button>
+  </div>
+
+  <!-- Modal hồ sơ vụ án -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box paper" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" type="button" aria-label="Đóng">✕</button>
+      <p class="modal__case" id="modalCase"></p>
+      <h3 id="modalTitle"></h3>
+      <p class="modal__meta" id="modalMeta"></p>
+      <p id="modalDesc"></p>
+      <h4 id="modalRoleTitle"></h4>
+      <ul class="list" id="modalList"></ul>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Hình vân tay dùng chung -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="fp" viewBox="0 0 120 150">
+      <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M60 12c-26 0-46 20-46 48v26"/><path d="M60 12c26 0 46 20 46 48v18"/>
+        <path d="M24 92V60c0-21 16-37 36-37s36 16 36 37v30" stroke-dasharray="70 6 40 8"/>
+        <path d="M34 112V60c0-15 12-27 26-27s26 12 26 27v44" stroke-dasharray="50 7 30 5 60"/>
+        <path d="M44 126V60c0-9 7-17 16-17s16 8 16 17v58" stroke-dasharray="40 6 70"/>
+        <path d="M54 136V60c0-3 3-6 6-6s6 3 6 6v70" stroke-dasharray="30 5 50 6"/>
+        <path d="M14 104c2 10 6 20 12 28"/><path d="M106 96c-2 14-6 26-14 38" stroke-dasharray="20 5"/>
+        <path d="M76 124c0 8-2 14-4 18"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <script src="js/text.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
